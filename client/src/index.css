@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif !important;
+}
+/*authentication pages*/
+input{
+    border-radius: 2px !important;
+    border: 1px solid hsl(128, 128, 128, 0.521) !important;
+    height:40px !important;
+}
+input.focus, .antd-picker{
+    outline:none !important;
+    box-shadow:none !important;
+    border: 1px solid gray !important;
+}
+label{
+    font-size:16px !important;
+    color : black !important;
+
+}
+.ant-form-item{
+    margin: 10px 0 !important;
+}
+.ant-picker-input{
+    border: none !important;
+}
+.antd-picker{
+    height: 40px !important;
+}
+.spinner-parent{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity:0.8;
+    background-color:black;
+    position: fixed;
+    top:0;
+    left:0;
+    width :100%;
+    height: 100%;
+    z-index:9999;
+}
+.spinner-border{
+    width: 5rem;
+    height: 5rem;
+    color:white !important;
+}
+.page-title{
+    font-size: 30px;
+    color: #000000a5;
+    font-weight:bold;
+}
+
+.card-title {
+    font-size:22px;
+    font-weight:bold;
+    color: rgba(0, 0, 0, 0.567);
+    
+}
+.normal-text{
+    font-size:1rem;
+}
+.card{
+    box-shadow: 0 0 2px grey;
+    border-radius: 0 !important;
+}
+.primary-button{
+    background-color: rgb(28, 217, 234);
+    border-color: rgb(56, 154, 230);
+    height:40px !important;
+    width:100% !important;
+    color:rgba(0, 0, 0, 0.712) !important;
+    font-size:18px !important;
+    width: max-content !important;
+    font-weight:bold;
+}
+
+
+
+.anchor{
+    color:black !important;
+    text-decoration:underline;
+    cursor: pointer;
+    font-size: 16px !important;
+}
+.anchor:hover{
+    text-decoration: underline !important;
+}
+.authentication{
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background-color: rgb(56, 154, 230);
+}
+.authentication-form{
+    width: 400px;
+}
+.authentication .card-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color:rgb(18, 223, 189);
+    color:rgb(46, 45, 45) !important;
+    max-width:max-content !important;
+    padding: 7px 30px !important;
+    margin-left: -40px !important;
+    border-bottom-left-radius: 10px !important;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .article {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .welcome h1{
+    margin-left: 20px !important;  
+    
+  }
+  .article h6{
+    margin-left: 20px !important;
+  }
+  .button{
+    background-color:#0d94b6 !important;
+    font-family: ' monospace';
+    margin-left: 20px;
+    color: white !important;
+    border-radius: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+  }
+
+ .search{
+    margin-left: 780px;
+    width:300px ;
+    padding: 5px;
+    border-radius: 60px;
+ }
+
+ 
