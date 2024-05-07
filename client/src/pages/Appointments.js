@@ -85,6 +85,11 @@ const Appointments = () => {
       key: "phoneNumber",
     },
     {
+      title: "Service",
+      dataIndex: "service",
+      key: "service",
+    },
+    {
       title: "Doctor",
       dataIndex: "doctor",
       key: "doctor",
