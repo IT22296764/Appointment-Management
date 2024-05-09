@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
-import {SearchOutlined} from '@ant-design/icons'
+import { SearchOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import { Table, Button, message } from 'antd';
 
@@ -16,7 +16,6 @@ const AppManager = () => {
   };
 
   useEffect(() => {
-
     const fetchAppointmentsData = async () => {
       try {
         const response = await axios.get("http://localhost:3002/api/patient/get-appointment");
@@ -30,13 +29,11 @@ const AppManager = () => {
     fetchAppointmentsData();
   }, []);
 
-  //Handle Search
-const handleSearch = async () => {
-  const results = appointments.filter(item => item.Name.toLowerCase().includes(searchQuery.toLowerCase()));
-  setAppointments(results);
-};
-
-
+  // Handle Search
+  const handleSearch = async () => {
+    const results = appointments.filter(item => item.name.toLowerCase().includes(searchQuery.toLowerCase()));
+    setAppointments(results);
+  };
 
   const handleApprove = async (id) => {
     try {
@@ -68,14 +65,13 @@ const handleSearch = async () => {
       console.error('Error rejecting appointment:', error);
       message.error('Failed to reject appointment. Please try again later.');
     }
-
   };
 
   const columns = [
     {
       title: "Name",
-      dataIndex: "Name",
-      key: "Name",
+      dataIndex: "name",
+      key: "name",
     },
     {
       title: "Phone",
@@ -115,23 +111,22 @@ const handleSearch = async () => {
   ]; 
 
   return (
-
     <Layout>
       <h1 className='page-title'>Appointments</h1>
       <div className='search'>
-                    <input 
-                    className='searchInput'
-                    placeholder=' Search by Name'
-                    prefix={<SearchOutlined />}
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    style={{width:"250px",height: "30px",border:"none", boxShadow:"none", borderRadius:'50px' , marginLeft: '15px'}}
-                    />
-                   <SearchOutlined
-                style={{ fontSize: "20px", cursor: "pointer" , padding:"2.5px"}}
-                onClick={handleSearch}
-            />
-                </div>
+        <input 
+          className='searchInput'
+          placeholder=' Search by Name'
+          prefix={<SearchOutlined />}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          style={{width:"250px",height: "30px",border:"none", boxShadow:"none", borderRadius:'50px' , marginLeft: '15px'}}
+        />
+        <SearchOutlined
+          style={{ fontSize: "20px", cursor: "pointer" , padding:"2.5px"}}
+          onClick={handleSearch}
+        />
+      </div>
       <Table 
         columns={columns} 
         dataSource={appointments.map(appointment => ({ ...appointment, key: appointment._id }))} 
