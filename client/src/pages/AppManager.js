@@ -70,8 +70,8 @@ const AppManager = () => {
   const columns = [
     {
       title: "Name",
-      dataIndex: "name",
-      key: "name",
+      dataIndex: "Name",
+      key: "Name",
     },
     {
       title: "Phone",
